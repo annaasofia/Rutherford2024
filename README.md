@@ -11,7 +11,7 @@ Questo repository contiene:
 ## Accesso da remoto
 
 Per accedere al repository da remoto, è necessario clonarlo utilizzando Git.  
-Per clonare il repository:
+Per clonare il repository, dal proprio terminale:
 ```bash
 git clone https://github.com/tuo-username/Rutherford2024.git
 ```
@@ -20,13 +20,12 @@ Successivamente sarà necessario identificarsi da terminale remoto tramite:
 git config user.name "username"
 git config user.email "email@example.com"
 ```
-E per lavorarci da remoto basterà semplicemente:
+E per lavorarci basterà semplicemente:
 ```bash
 cd Rutherford2024
 ```
 ### Caricare le modifiche
-
-Dopo aver fatto delle modifiche ai file nel repository, esegui il seguente comando per aggiungere le modifiche online:
+Dopo aver fatto delle modifiche ai file nel repository locale, esegui il seguente comando per aggiungere le modifiche online:
 ```bash
 git add .
 ```
@@ -53,6 +52,20 @@ Per ottenerlo:
 6. Copia immediatamente il token (GitHub non te lo mostrerà più).
 
 Ora il token potrà essere usato al posto della password quando si invia in comando `git push origin main`.
+
+### Scaricare le modifiche
+Prima di tutto, verifica di essere nella directory giusta dove hai il tuo repository Git. Puoi usare il comando:
+```bash
+cd /percorso/del/tuo/repository
+```
+Esegui il comando per ottenere le ultime modifiche dal repository remoto:
+```bash
+git pull origin main
+```
+Puoi anche usare git status per vedere se ci sono nuove modifiche scaricate nel tuo repository locale:
+```bash
+git status
+```
 
 
 
