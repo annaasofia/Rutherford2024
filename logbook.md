@@ -31,12 +31,16 @@ dove il `.` significa *here*, altrimenti indicare il percorso tramite `./your/pa
 ## Test no targhetta
 
 ## Targhetta Au: piccoli angoli
+**Script:** [Au_small_angles.script](./scripts/Au_small_angles_script) da -25.2 a +25.2 gradi.
 
 ## Pulser: stima del dead time
 
 ## Stima X
 Targhetta di carta con grammatura ∼100 g/mq.  
-...
+**Calcolo del rate:**  
+Presa dati entro ±15 gradi, come in [Test no targhetta](#test-no-targhetta), limite angolo solito. E, tenendo conto che sono probabilmente dati da transizioni, ...  
+
+[documentazione generale Am241](http://www.lnhb.fr/nuclides/Am-241_tables.pdf)
 
 
 
