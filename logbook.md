@@ -31,7 +31,7 @@ dove il `.` significa *here*, altrimenti indicare il percorso tramite `./your/pa
 ## Test no targhetta
 
 ## Targhetta Au: piccoli angoli
-**Script:** [Au_small_angles.script](./scripts/Au_small_angles_script) da -25.2 a +25.2 gradi.
+**Script:** [Au_small_angles.script](./scripts/Au_small_angles.script) da -25.2 a +25.2 gradi.
 
 ## Pulser: stima del dead time
 
