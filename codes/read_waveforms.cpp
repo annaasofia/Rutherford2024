@@ -5,7 +5,7 @@
 #include<algorithm>
 using namespace std;
 
-int main(){
+void read_waveforms(){
 
     vector <double> v;
     vector <double> max;
@@ -61,6 +61,5 @@ int main(){
     cout << max.size() << endl;
     write.close();
     //write_waveform.close();
-
-    return 0;
+    
 }
