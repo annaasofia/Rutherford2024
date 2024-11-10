@@ -27,11 +27,16 @@ scp collazuo@147.162.55.95:Scrivania/Rutherford_2024/your/path .
 dove il `.` significa *here*, altrimenti indicare il percorso tramite `./your/path/here`.
 
 ## Simulazione
+**Codes:** [Newsim7.cpp](./codes/Newsim7.cpp)
+Sorgente non puntiforme, energia alpha emesse 4.7 MeV, un collimatore.
+**Beam profile:** traiettorie rettilinee, condizione di passaggio per il collimatore e di arrivo nel detector.
+**Scattering profile:** come sopra ma con scattering; in targhetta step minore del cammino libero medio, se si verifica lo scattering generazione del parametro d'impatto (range di b fissato da confronto tra angular straggling su Lise++ e distribuzione angolare finale), cambio direzione dopo lo scattering, ripeti fino all'uscita dalla targhetta.
+Lo spessore della targhetta è stato variato per ottenere delle code più simili ai dati, come valore finale è stato assunto 0.16 um
 
 ## Test no targhetta
 
 ## Targhetta Au: piccoli angoli
-**Script:** [Au_small_angles.script](./scripts/Au_small_angles.script) da -25.2 a +25.2 gradi.
+**Script:** [Au_small_angles.script](./scripts/Au_small_angles.script) da -22.5 a +25.2 gradi.
 
 ## Pulser: stima del dead time
 
