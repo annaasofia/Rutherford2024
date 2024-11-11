@@ -43,8 +43,8 @@ dove `./main` apre solo l'interfaccia di Rushield, da cui si può avviare il mot
 ## Dimensioni setup
 Misure effettuate con calibro, che ha precisione di $\pm0.05$ mm  
 **Collimatori:**  
-1) $h=6\,mm\;850\,\mu m$ ; $l=3\,mm\;850\,\mu m$ ; $z=1\,mm\;500\,\mu m$ ; $d_{targh}=0.9\,mm$ ; $d_{detect}=78.1\,mm$
-2) $h=6\,mm\;850\,\mu m$ ; $l=3\,mm\;900\,\mu m$ ; $z=1\,mm\;500\,\mu m$ ; $d_{targh}=16\,mm\;650\,\mu m$  
+1) $h=6\,mm\,\,850\,\mu m$ ; $l=3\,mm\,\,850\,\mu m$ ; $z=1\,mm\,\,500\,\mu m$ ; $d_{targh}=0.9\,mm$ ; $d_{detect}=78.1\,mm$
+2) $h=6\,mm\,\,850\,\mu m$ ; $l=3\,mm\,\,900\,\mu m$ ; $z=1\,mm\,\,500\,\mu m$ ; $d_{targh}=16\,mm\,\,650\,\mu m$  
 dove con $d_{targh}$ si intendono le distanze dei collimatori dalla targhetta, spessori esclusi, e con $d_{detect}$ distanza collimatore-detector.
 
 collimatore del SiPM $h=3.4\,mm$ - $l=3.5\,mm$
