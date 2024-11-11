@@ -4,6 +4,8 @@
 
 ## Indice
 - [Accesso da remoto](#accesso-da-remoto)
+- [Acquisizione](#acquisizione)
+- [Dimesnioni setup](#dimensioni-setup)
 - [Simulazione](#simulazione)
 - [Test no targhetta](#test-no-targhetta)
 - [Targhetta Au: piccoli angoli](#targhetta-au-piccoli-angoli)
@@ -26,11 +28,35 @@ scp collazuo@147.162.55.95:Scrivania/Rutherford_2024/your/path .
 ```
 dove il `.` significa *here*, altrimenti indicare il percorso tramite `./your/path/here`.
 
+## Acquisizione
+```bash
+cd Scrivania/RuShield_Control/v3/main/main
+```
+```bash
+./main
+./main ../../../../Rutherford_2024/script.script
+```
+dove `./main` apre solo l'interfaccia di Rushield, da cui si può avviare il motore e calibrare manualmente.
+
+**Center:** $\phi_0=145.8°=162$ steps
+
+## Dimensioni setup
+Misure effettuate con calibro, che ha precisione di $\pm0.05$ mm  
+**Collimatori:**  
+1) $h=6\,mm\;850\,\mu m$ ; $l=3\,mm\;850\,\mu m$ ; $z=1\,mm\;500\,\mu m$ ; $d_{targh}=0.9\,mm$ --- $d_{detect}=78.1\,mm$
+2) $h=6\,mm\;850\,\mu m$ ; $l=3\,mm\;900\,\mu m$ ; $z=1\,mm\;500\,\mu m$ ; $d_{targh}=16\,mm\;650\,\mu m$  
+dove con $d_{targh}$ si intendono le distanze dei collimatori dalla targhetta, spessori esclusi, e con $d_{detect}$ distanza collimatore-detector.
+
+collimatore del SiPM $h=3.4\,mm$ - $l=3.5\,mm$
+
+**Sorgente:**  
+diametro $d_S=7.5\,mm$
+
 ## Simulazione
 **Codes:** [Newsim7.cpp](./codes/Newsim7.cpp)
-Sorgente non puntiforme, energia alpha emesse 4.7 MeV, un collimatore.
-**Beam profile:** traiettorie rettilinee, condizione di passaggio per il collimatore e di arrivo nel detector.
-**Scattering profile:** come sopra ma con scattering; in targhetta step minore del cammino libero medio, se si verifica lo scattering generazione del parametro d'impatto (range di b fissato da confronto tra angular straggling su Lise++ e distribuzione angolare finale), cambio direzione dopo lo scattering, ripeti fino all'uscita dalla targhetta.
+Sorgente non puntiforme, energia alpha emesse 4.7 MeV, un collimatore.  
+**Beam profile:** traiettorie rettilinee, condizione di passaggio per il collimatore e di arrivo nel detector.  
+**Scattering profile:** come sopra ma con scattering; in targhetta step minore del cammino libero medio, se si verifica lo scattering generazione del parametro d'impatto (range di b fissato da confronto tra angular straggling su Lise++ e distribuzione angolare finale), cambio direzione dopo lo scattering, ripeti fino all'uscita dalla targhetta.  
 Lo spessore della targhetta è stato variato per ottenere delle code più simili ai dati, come valore finale è stato assunto 0.16 um
 
 ## Test no targhetta
@@ -42,8 +68,9 @@ Lo spessore della targhetta è stato variato per ottenere delle code più simili
 
 ## Stima X
 Targhetta di carta con grammatura ∼100 g/mq.  
+Presa dati circa centrato sullo zero (problemi motorino) con **gain 1k** e con diversi valori di trigger: 150mV, 200, mV, 250 mV ([X_center.script](./scripts/X_center.script))    
 **Calcolo del rate:**  
-Presa dati entro ±15 gradi, come in [Test no targhetta](#test-no-targhetta), limite angolo solito. E, tenendo conto che sono probabilmente dati da transizioni, ...  
+Presa dati entro ±15 gradi, come in [Test no targhetta](#test-no-targhetta), limite angolo solito.
 
 [documentazione generale Am241](http://www.lnhb.fr/nuclides/Am-241_tables.pdf)
 
