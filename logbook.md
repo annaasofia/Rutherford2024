@@ -5,7 +5,7 @@
 ## Indice
 - [Accesso da remoto](#accesso-da-remoto)
 - [Acquisizione](#acquisizione)
-- [Dimesnioni setup](#dimensioni-setup)
+- [Dimensioni setup](#dimensioni-setup)
 - [Simulazione](#simulazione)
 - [Test no targhetta](#test-no-targhetta)
 - [Targhetta Au: piccoli angoli](#targhetta-au-piccoli-angoli)
