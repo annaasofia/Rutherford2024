@@ -43,14 +43,14 @@ dove `./main` apre solo l'interfaccia di Rushield, da cui si può avviare il mot
 ## Dimensioni setup
 Misure effettuate con calibro, che ha precisione di $\pm0.05$ mm  
 **Collimatori:**  
-1) $h=6\,mm\,\,850\,\mu m$ ; $l=3\,mm\,\,850\,\mu m$ ; $z=1\,mm\,\,500\,\mu m$ ; $d_{targh}=0.9\,mm$ ; $d_{detect}=78.1\,mm$
-2) $h=6\,mm\,\,850\,\mu m$ ; $l=3\,mm\,\,900\,\mu m$ ; $z=1\,mm\,\,500\,\mu m$ ; $d_{targh}=16\,mm\,\,650\,\mu m$  
+1) $h=6$ mm $850$ um ; $l=3$ mm $850$ um ; $z=1$ mm $500$ um ; $d_{targh}=0.9$ mm ; $d_{detect}=78.1$ mm
+2) $h=6$ mm $850$ um ; $l=3$ mm $900$ um ; $z=1$ mm $500$ um ; $d_{targh}=16$ mm $650$ um  
 dove con $d_{targh}$ si intendono le distanze dei collimatori dalla targhetta, spessori esclusi, e con $d_{detect}$ distanza collimatore-detector.
 
-collimatore del SiPM $h=3.4\,mm$ - $l=3.5\,mm$
+collimatore del SiPM $h=3.4$ mm ; $l=3.5$ mm
 
 **Sorgente:**  
-diametro $d_S=7.5\,mm$
+diametro $d_S=7.5$ mm
 
 ## Simulazione
 **Codes:** [Newsim7.cpp](./codes/Newsim7.cpp)
@@ -68,7 +68,7 @@ Lo spessore della targhetta è stato variato per ottenere delle code più simili
 
 ## Stima X
 Targhetta di carta con grammatura ∼100 g/mq.  
-Presa dati circa centrato sullo zero (problemi motorino) con **gain 1k** e con diversi valori di trigger: 150mV, 200, mV, 250 mV ([X_center.script](./scripts/X_center.script))    
+Presa dati circa centrato sullo zero (problemi motorino) con **gain 1k** e con diversi valori di trigger: 150mV, 200mV, 250 mV ([X_center.script](./scripts/X_center.script))    
 **Calcolo del rate:**  
 Presa dati entro ±15 gradi, come in [Test no targhetta](#test-no-targhetta), limite angolo solito.
 
