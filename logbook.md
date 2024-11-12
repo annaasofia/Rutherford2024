@@ -54,8 +54,10 @@ diametro $d_S=7.5$ mm
 
 ## Simulazione
 **Codes:** [Newsim7.cpp](./codes/Newsim7.cpp)
-Sorgente non puntiforme, energia alpha emesse 4.7 MeV, un collimatore.  
-**Beam profile:** traiettorie rettilinee, condizione di passaggio per il collimatore e di arrivo nel detector.  
+Sorgente non puntiforme, energia alpha emesse 4.7 MeV, un collimatore.
+
+**Beam profile:** traiettorie rettilinee, condizione di passaggio per il collimatore e di arrivo nel detector.
+
 **Scattering profile:** come sopra ma con scattering; in targhetta step minore del cammino libero medio, se si verifica lo scattering generazione del parametro d'impatto (range di b fissato da confronto tra angular straggling su Lise++ e distribuzione angolare finale), cambio direzione dopo lo scattering, ripeti fino all'uscita dalla targhetta.  
 Lo spessore della targhetta è stato variato per ottenere delle code più simili ai dati, come valore finale è stato assunto 0.16 um
 
@@ -65,6 +67,18 @@ Lo spessore della targhetta è stato variato per ottenere delle code più simili
 **Script:** [Au_small_angles.script](./scripts/Au_small_angles.script) da -22.5 a +25.2 gradi.
 
 ## Pulser: stima del dead time
+$\%_D=(1-\frac{N_{osserv}}{N_{attese}})$   
+dove $N_{oss}$ numero di waveforms osservate a partire dai dati, $N_{att}$ sono le waveforms attese calcolate come $floor(t_{run}/\tau)$, dove $t_{run}$ è il runtime totale (impostato+exceeded) e $\tau$ è il periodo impostato nel pulser (1s o 10s).
+
+Per correggere i dati:  
+$N_{true}=\frac{N}{(1-\%_D)}$
+
+**Analisi di $N_{osservate}$:**
+- [read_waveforms2.cpp](./scripts/read_waveforms2.cpp)
+- integrazione entro 3 sigma attorno al picco $\to$ non sempre efficiente
+- integrazione entro 3 sigma dopo una sottrazione di un fondo/coda delle alfa $\to$ risulta sempre $N_{oss}<N_{att}$
+- *attenzione: se possibile preferire un ciclo* `for` *sugli eventi con* `if` *statements per filtrare gli eventi piuttosto che la funzione* `->Integral(min,max)` *che usa il numero di bin, perdendo così di notevole precisione*
+
 
 ## Stima X
 Targhetta di carta con grammatura ∼100 g/mq.  
