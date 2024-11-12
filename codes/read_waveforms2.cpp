@@ -23,8 +23,10 @@ void read_waveforms2() {
 //variables to change
     //int const runs = 2243;
     //int const segments = 1;
+
     //string path = "Au_small_angles/";
     string path = "pulserHertz/";
+    //string path = "../../X_center/";
     string angle;
     int runs;
     int segments;

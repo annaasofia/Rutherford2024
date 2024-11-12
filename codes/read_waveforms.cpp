@@ -14,7 +14,7 @@ void read_waveforms(){
 //variables to change
     //int const runs = 2243;
     //int const segments = 1;
-    string path = "Au_small_angles/";
+    string path = "../../X_center/";
     string angle;
     int runs;
     int segments;
@@ -34,7 +34,7 @@ void read_waveforms(){
 
 //reading the data from every file
     ofstream write("data_max.txt"); //collect the maximums into a file
-    //ofstream write_waveform("data_waveform.txt");
+    ofstream write_waveform("data_waveform.txt");
     for(int i=0; i<inputfile.size(); i++){
     
         ifstream read(inputfile.at(i));
@@ -46,10 +46,10 @@ void read_waveforms(){
         while(read>>a){
             v.push_back(a);
 //writing the points of the first ten files
-            /*if(i<10)
+            if(i<5)
             {write_waveform << row << "\t" << a << endl;
             row++;
-            }*/
+            }
         }
 //finding the maximum of the file
         max.push_back(*max_element(v.begin(),v.end()));
@@ -60,6 +60,6 @@ void read_waveforms(){
     }
     cout << max.size() << endl;
     write.close();
-    //write_waveform.close();
+    write_waveform.close();
     
 }
