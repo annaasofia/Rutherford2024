@@ -86,7 +86,8 @@ Presa dati circa centrato sullo zero (problemi motorino) con **gain 1k** e con d
 **Calcolo del rate:**  
 Presa dati entro ±15 gradi, come in [Test no targhetta](#test-no-targhetta), limite angolo solito.
 
-[documentazione generale Am241](http://www.lnhb.fr/nuclides/Am-241_tables.pdf)
+[documentazione generale Am241](http://www.lnhb.fr/nuclides/Am-241_tables.pdf)  
+[articolo Collazuol](https://www.tandfonline.com/doi/full/10.1080/00223131.2016.1174167#d1e675)
 
 
 
