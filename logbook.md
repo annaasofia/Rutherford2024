@@ -10,6 +10,7 @@
 - [Test no targhetta](#test-no-targhetta)
 - [Targhetta Au: piccoli angoli](#targhetta-au-piccoli-angoli)
 - [Pulser: stima del dead time](#pulser-stima-del-dead-time)
+- [Stima X](#stima-x)
 
 ## Accesso da remoto
 Per trovare l'IP del computer:
