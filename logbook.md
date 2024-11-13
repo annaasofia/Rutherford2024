@@ -67,11 +67,11 @@ Lo spessore della targhetta è stato variato per ottenere delle code più simili
 **Script:** [Au_small_angles.script](./scripts/Au_small_angles.script) da -22.5 a +25.2 gradi.
 
 ## Pulser: stima del dead time
-$\%_D=(1-\frac{N_{osserv}}{N_{attese}})$   
+$\tau_D=(1-\frac{N_{osserv}}{N_{attese}})$ in percentuale   
 dove $N_{oss}$ numero di waveforms osservate a partire dai dati, $N_{att}$ sono le waveforms attese calcolate come $floor(t_{run}/\tau)$, dove $t_{run}$ è il runtime totale (impostato+exceeded) e $\tau$ è il periodo impostato nel pulser (1s o 10s).
 
 Per correggere i dati:  
-$N_{true}=\frac{N}{(1-\%_D)}$
+$N_{true}=\frac{N}{(1-\tau_D)}$
 
 **Analisi di $N_{osservate}$:**
 - [read_waveforms2.cpp](./scripts/read_waveforms2.cpp)
