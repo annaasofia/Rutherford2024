@@ -10,6 +10,7 @@
 - [Test no targhetta](#test-no-targhetta)
 - [Targhetta Au: piccoli angoli](#targhetta-au-piccoli-angoli)
 - [Pulser: stima del dead time](#pulser-stima-del-dead-time)
+- [Stima X](#stima-x)
 
 ## Accesso da remoto
 Per trovare l'IP del computer:
@@ -43,8 +44,9 @@ dove `./main` apre solo l'interfaccia di Rushield, da cui si può avviare il mot
 ## Dimensioni setup
 Misure effettuate con calibro, che ha precisione di $\pm0.05$ mm  
 **Collimatori:**  
-1) $h=6$ mm $850$ um ; $l=3$ mm $850$ um ; $z=1$ mm $500$ um ; $d_{targh}=0.9$ mm ; $d_{detect}=78.1$ mm
-2) $h=6$ mm $850$ um ; $l=3$ mm $900$ um ; $z=1$ mm $500$ um ; $d_{targh}=16$ mm $650$ um  
+1) $h=6$ mm $850$ um ; $l=3$ mm $850$ um ; $z=1$ mm $500$ um ; $d_{targh}=0.9$ mm ; $d_{detect}=78.1$ mm    
+   $d_{detect}^{NEW}=79.1$ mm + $d_{detect}^{NEW2}=5.5$ mm
+3) $h=6$ mm $850$ um ; $l=3$ mm $900$ um ; $z=1$ mm $500$ um ; $d_{targh}=16$ mm $650$ um  
 dove con $d_{targh}$ si intendono le distanze dei collimatori dalla targhetta, spessori esclusi, e con $d_{detect}$ distanza collimatore-detector.
 
 collimatore del SiPM $h=3.4$ mm ; $l=3.5$ mm
@@ -67,11 +69,11 @@ Lo spessore della targhetta è stato variato per ottenere delle code più simili
 **Script:** [Au_small_angles.script](./scripts/Au_small_angles.script) da -22.5 a +25.2 gradi.
 
 ## Pulser: stima del dead time
-$\%_D=(1-\frac{N_{osserv}}{N_{attese}})$   
+$\tau_D=(1-\frac{N_{osserv}}{N_{attese}})$ in percentuale   
 dove $N_{oss}$ numero di waveforms osservate a partire dai dati, $N_{att}$ sono le waveforms attese calcolate come $floor(t_{run}/\tau)$, dove $t_{run}$ è il runtime totale (impostato+exceeded) e $\tau$ è il periodo impostato nel pulser (1s o 10s).
 
 Per correggere i dati:  
-$N_{true}=\frac{N}{(1-\%_D)}$
+$N_{true}=\frac{N}{(1-\tau_D)}$
 
 **Analisi di $N_{osservate}$:**
 - [read_waveforms2.cpp](./scripts/read_waveforms2.cpp)
@@ -86,7 +88,8 @@ Presa dati circa centrato sullo zero (problemi motorino) con **gain 1k** e con d
 **Calcolo del rate:**  
 Presa dati entro ±15 gradi, come in [Test no targhetta](#test-no-targhetta), limite angolo solito.
 
-[documentazione generale Am241](http://www.lnhb.fr/nuclides/Am-241_tables.pdf)
+[documentazione generale Am241](http://www.lnhb.fr/nuclides/Am-241_tables.pdf)  
+[articolo Collazuol](https://www.tandfonline.com/doi/full/10.1080/00223131.2016.1174167#d1e675)
 
 
 
