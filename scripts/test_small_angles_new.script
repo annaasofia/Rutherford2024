@@ -1,4 +1,4 @@
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new;
 SetBasePath;
 SetPath;
 
@@ -38,7 +38,7 @@ ChangeDIR;
 
 RUN_TIME_2_spin 45;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/15_3;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/15_3;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -46,7 +46,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/14_4;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/14_4;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -54,7 +54,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/13_5;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/13_5;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -62,7 +62,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/12_6;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/12_6;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -70,7 +70,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/11_7;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/11_7;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -78,7 +78,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/10_8;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/10_8;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -86,7 +86,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/9_9;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/9_9;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -98,7 +98,7 @@ RUN_TIME_1_spin 0;
 RUN_TIME_2_spin 10;
 N_SEGMENTS_spin 100;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/9_0;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/9_0;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -106,7 +106,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/8_1;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/8_1;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -114,7 +114,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/7_2;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/7_2;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -122,7 +122,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/6_3;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/6_3;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -130,7 +130,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/5_4;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/5_4;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -138,7 +138,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/4_5;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/4_5;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -146,7 +146,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/3_6;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/3_6;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -154,7 +154,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/2_7;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/2_7;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -162,7 +162,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/1_8;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/1_8;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -170,7 +170,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/0_9;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/0_9;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -178,7 +178,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/0;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/0;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -186,7 +186,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-0_9;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-0_9;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -194,7 +194,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-1_8;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-1_8;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -202,7 +202,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-2_7;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-2_7;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -210,7 +210,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-3_6;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-3_6;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -218,7 +218,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-4_5;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-4_5;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -226,7 +226,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-5_4;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-5_4;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -234,7 +234,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-6_3;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-6_3;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -242,7 +242,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-7_2;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-7_2;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -250,7 +250,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-8_1;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-8_1;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -258,7 +258,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-9_0;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-9_0;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -269,7 +269,7 @@ RotateSource;
 RUN_TIME_2_spin 45;
 N_SEGMENTS_spin 10;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-9_9;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-9_9;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -277,7 +277,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-10_8;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-10_8;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -285,7 +285,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-11_7;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-11_7;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -293,7 +293,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-12_6;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-12_6;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -301,7 +301,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-13_5;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-13_5;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -309,7 +309,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-14_4;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-14_4;
 SetPath;
 DataCollection;
 PicoScopeStart;
@@ -317,7 +317,7 @@ DataCollection;
 
 RotateSource;
 
-OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles/-15_3;
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/test_small_angles_new/-15_3;
 SetPath;
 DataCollection;
 PicoScopeStart;
