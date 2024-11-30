@@ -11,6 +11,7 @@
 - [Targhetta Au: piccoli angoli](#targhetta-au-piccoli-angoli)
 - [Pulser: stima del dead time](#pulser-stima-del-dead-time)
 - [Stima X](#stima-x)
+- [Acquisizioni con nuova geometria](#acquisizioni-con-nuova-geometria)
 
 ## Accesso da remoto
 Per trovare l'IP del computer:
@@ -85,11 +86,18 @@ $N_{true}=\frac{N}{(1-\tau_D)}$
 ## Stima X
 Targhetta di carta con grammatura ∼100 g/mq.  
 Presa dati circa centrato sullo zero (problemi motorino) con **gain 1k** e con diversi valori di trigger: 150mV, 200mV, 250 mV ([X_center.script](./scripts/X_center.script))    
-**Calcolo del rate:**  
+**Calcolo del rate: (da qui in poi CAMBIO GEOMETRIA)**  
 Presa dati entro ±15 gradi, come in [Test no targhetta](#test-no-targhetta), limite angolo solito.
 
 [documentazione generale Am241](http://www.lnhb.fr/nuclides/Am-241_tables.pdf)  
 [articolo Collazuol](https://www.tandfonline.com/doi/full/10.1080/00223131.2016.1174167#d1e675)
+[attenuazione in foglio di carta](https://physics.nist.gov/cgi-bin/Xcom/xcom2?Method=Comp&Output2=Hand)
+[attenuazione in aria](https://physics.nist.gov/PhysRefData/XrayMassCoef/ComTab/air.html)
 
 
+## Acquisizioni con nuova geometria
+**Beam profile:**
+No targhetta, test_small_angles_new, range ±15 gradi, wf pulite a 3V circa, conteggio fatto direttamente dal numero di file acquisiti e corretto poi con i valori di tempo morto trovati nei punti precedenti (non dipendendo dalla geometria dovrebbe essere corretto)
 
+**Scattering big angles:**
+Con targhetta Au, range fino a ±47 (?) gradi
