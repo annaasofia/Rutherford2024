@@ -101,3 +101,9 @@ No targhetta, test_small_angles_new, range ±15 gradi, wf pulite a 3V circa, con
 
 **Scattering big angles:**
 Con targhetta Au, range fino a ±47 (?) gradi
+
+## Possibili analisi aggiuntive
+**Plot dell'Energy_loss delle alpha:** con coda visibile in scala logaritmica. La simulazione potrebbe spiegare l'origine delle code di alpha che vediamo e sottraiamo nella sezione sulla stima del dead time.
+**Raggi X:** con i picchi visibili alle tre energie 13, 26, 60 keV è possibile ottenere una calibrazione (che vale però solo per quella sezione).
+**Risoluzione in energia rispetto all'angolo**
+
