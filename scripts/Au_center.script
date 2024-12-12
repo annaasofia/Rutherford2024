@@ -1,0 +1,49 @@
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/Au_center;
+SetBasePath;
+SetPath;
+
+CalibrateSource;
+PowerUP;
+
+RUN_TIME_1_spin 0; #hours
+RUN_TIME_2_spin 15; #minutes
+RUN_TIME_3_spin 0; #seconds
+N_CAPTURES_spin 5000000; #events to capture
+N_SEGMENTS_spin 100; #n. memory segments
+CHANNEL_NAME_combo A; #input channel
+CHANNEL_RANGE_combo 5V; #voltage range
+RESOLUTION_combo 12bit; #ADC resolution
+SAMPLESDIV_spin 500; #samples per div
+SRMULTIPLIER_combo MS/s; #sample rate
+SAMPLERATE_spin 200; #sample rate
+TRIGGER_SOURCE_combo A; #trigger source
+TRIGGER_text 500; #TRIGGER value mV
+TRIGGER_DIRECTION_combo Falling; #trigger direction
+PRETRIGGER_text 40; #pretrigger percent
+
+STEP_ANGLE_text 0.9;
+SetAngle;
+
+CenterSource;
+MOTOR_DIRECTION_radio 0;
+ChangeDIR;
+
+FOR i,1,163,1:
+RotateSource;
+END_FOR;
+
+MOTOR_DIRECTION_radio 1;
+ChangeDIR;
+
+RUN_TIME_1_spin 120; #hours
+RUN_TIME_2_spin 0; #minutes
+N_SEGMENTS_spin 1;
+
+OUTPUT_PATH_text /home/collazuo/Scrivania/Rutherford_2024/Au_center/back;
+SetPath;
+DataCollection;
+PicoScopeStart;
+DataCollection;
+
+# Powering down the motor
+PowerDOWN;
