@@ -100,7 +100,7 @@ Presa dati entro ±15 gradi, come in [Test no targhetta](#test-no-targhetta), li
 No targhetta, test_small_angles_new, range ±15 gradi, wf pulite a 3V circa, conteggio fatto direttamente dal numero di file acquisiti e corretto poi con i valori di tempo morto trovati nei punti precedenti (non dipendendo dalla geometria dovrebbe essere corretto)
 
 **Scattering big angles:**
-Con targhetta Au, range fino a ±47 (?) gradi
+Con targhetta Au, range ±47.7 gradi
 
 ## Possibili analisi aggiuntive
 **Plot dell'Energy_loss delle alpha:** con coda visibile in scala logaritmica. La simulazione potrebbe spiegare l'origine delle code di alpha che vediamo e sottraiamo nella sezione sulla stima del dead time.
