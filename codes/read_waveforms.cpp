@@ -14,7 +14,7 @@ void read_waveforms(){
 //variables to change
     //int const runs = 2243;
     //int const segments = 1;
-    string path = "../../X_center/";
+    string path = "../../Au_small_angles/";
     string angle;
     int runs;
     int segments;
@@ -33,8 +33,11 @@ void read_waveforms(){
     cout << "BEGIN: \"" << inputfile.front() << "\" - END: \"" << inputfile.back() << "\"" << endl;
 
 //reading the data from every file
-    ofstream write("data_max.txt"); //collect the maximums into a file
-    ofstream write_waveform("data_waveform.txt");
+    TCanvas *c1 = new TCanvas("c1", "Waveform", 800, 600);
+    TGraph *graph = new TGraph(); 
+    //ofstream write("data_max.txt"); //collect the maximums into a file
+    //ofstream write_waveform("data_waveform.txt");
+    double baseline = 0;
     for(int i=0; i<inputfile.size(); i++){
     
         ifstream read(inputfile.at(i));
@@ -42,24 +45,42 @@ void read_waveforms(){
 
         int a;
         int row = 0;
+        
 //reading the file i
         while(read>>a){
             v.push_back(a);
-//writing the points of the first ten files
-            if(i<5)
-            {write_waveform << row << "\t" << a << endl;
+//writing the points of the first # files
+            if(i==55)
+            {//write_waveform << row << "\t" << a << endl;
+            graph->SetPoint(row, row, a);
             row++;
+            if(row<1000) baseline = baseline + a;
             }
         }
 //finding the maximum of the file
         max.push_back(*max_element(v.begin(),v.end()));
-        write << i << "\t" << max.at(i) << endl; //write
+        //write << i << "\t" << max.at(i) << endl; //write
 
         v.clear();
         read.close();
     }
+    graph->SetTitle("Waveform from PicoScope");
+    graph->SetMarkerStyle(2); graph->SetMarkerSize(0.2);
+    graph->SetMarkerColor(kBlue+2); graph->SetLineColor(kBlue+2);
+    graph->GetXaxis()->SetRangeUser(0,1000); graph->GetYaxis()->SetRangeUser(-500,500);
+    graph->GetXaxis()->SetTitle("Time (ns)"); graph->GetYaxis()->SetTitle("Amplitude (ADC)");
+    graph->Draw("AL");
+    baseline = baseline/1000;
+    TLine *line = new TLine(0, baseline, 1000, baseline);
+    line->SetLineColor(kRed);
+    line->SetLineStyle(2);
+    line->SetLineWidth(2);
+    line->Draw("same");
+
+
+
     cout << max.size() << endl;
-    write.close();
-    write_waveform.close();
+    //write.close();
+    //write_waveform.close();
     
 }

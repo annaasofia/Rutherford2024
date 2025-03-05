@@ -25,7 +25,7 @@ void read_waveforms2() {
     //int const segments = 1;
 
     //string path = "Au_small_angles/";
-    string path = "pulserHertz/";
+    string path = "../../pulserHertz/";
     //string path = "../../X_center/";
     string angle;
     int runs;
@@ -127,34 +127,37 @@ void read_waveforms2() {
         }
     }
     
+    gStyle->SetOptStat(1111111);
     TCanvas *c0 = new TCanvas("c0", "c0", 800, 600);
+    c0->SetLogy();
     E_hist->Draw();
     gausFit->Draw("same"); gausFit2->Draw("same");
     l1->Draw("same"); l2->Draw("same"); l3->Draw("same"); l4->Draw("same");
 
 // ALFA TAIL SUBTRACTION
-    TCanvas *c1 = new TCanvas("c1", "c1", 800, 600);
+    //TCanvas *c1 = new TCanvas("c1", "c1", 800, 600);
+    //c1->SetLogy();
     TF1 *GFit = new TF1("GFit", "pol1", E_hist->GetBinLowEdge(1), E_hist->GetBinLowEdge(E_hist->GetNbinsX()) + 1);
     GFit->SetParameter(0, 1.);
     GFit->SetParameter(1, 0.);
     E_hist->Fit(GFit, "", "", 2300., 5000.);
     
-    E_hist->Draw();
-    GFit->SetLineColor(kGreen+1);
-    GFit->Draw("same");
+    //E_hist->Draw();
+    //GFit->SetLineColor(kGreen+1);
+    //GFit->Draw("same");
 
     TF1 *backgr = new TF1("backgr", "[0] + [1] * x", 2300., 5000.);
     backgr->SetParameters(GFit->GetParameter(0), GFit->GetParameter(1));
     backgr->SetLineColor(kGreen+3);
-    backgr->Draw("same");
+    //backgr->Draw("same");
 
     for (int i = 0; i < E_hist->GetNbinsX(); i++) {
         double bkg = 0;
         bkg = backgr->Eval(E_hist_noBkg->GetBinCenter(i));
         double content = 0;
         content = E_hist->GetBinContent(i);
-        if (content - bkg > 0) E_hist_noBkg->SetBinContent(i, content - bkg);
-        else E_hist_noBkg->SetBinContent(i,content);
+        if (content - bkg >= 1) E_hist_noBkg->SetBinContent(i, content - bkg);
+        else E_hist_noBkg->SetBinContent(i,0);
     }
 
     /*TCanvas *c2 = new TCanvas("c2", "c2", 800, 600);
@@ -188,9 +191,11 @@ void read_waveforms2() {
     cout << "ALFA COUNT <<" << alfa_count2 << ">>" << endl;
     cout << "--------------------------------------------------" << endl;
     cout << "--------------------------------------------------" << endl;
-    cout << "MEAN2: " << mean2 << " ± " << meanError2 << "SIGMA2: " << sigma2 << " ± " << sigmaError2 << endl;
+    cout << "waveforms WITHOUT alfa tail subtraction " << endl;
+    cout << "MEAN: " << mean2 << " ± " << meanError2 << "SIGMA: " << sigma2 << " ± " << sigmaError2 << endl;
     cout << "WF COUNT ±3σ <<" << wf_count_gauss.size() << ">>" << endl;
     cout << "--------------------------------------------------" << endl;
+    cout << "waveforms WITH alfa tail subtraction " << endl;
     //GAUSSIAN FIT ON THE WAVEFORMS
     TF1 *gausFit4 = new TF1("gausFit4","gaus",1500,2500);
     E_hist_noBkg->Fit(gausFit4, "QR");
@@ -213,20 +218,21 @@ void read_waveforms2() {
     l44->SetLineColor(2); 
 
 
-    cout << "MEAN2: " << mean2 << " ± " << meanError2 << "SIGMA2: " << sigma2 << " ± " << sigmaError2 << endl;
+    cout << "MEAN: " << mean2 << " ± " << meanError2 << "SIGMA: " << sigma2 << " ± " << sigmaError2 << endl;
     double wf_count2 = E_hist_noBkg->Integral(E_hist_noBkg->FindBin(mean2-3*sigma2), E_hist_noBkg->FindBin(mean2+3*sigma2));
     cout << "WF COUNT <<" << wf_count2 << ">>" << endl;
     cout << "--------------------------------------------------" << endl;    
     cout << "--------------------------------------------------" << endl;
     double scartati = max_baseline.size()-alfa_count_gauss.size()-wf_count_gauss.size();
-    cout << "DATI SCARTATI 1: " << scartati << " / " << max_baseline.size();
+    cout << "DATI SCARTATI without: " << scartati << " / " << max_baseline.size();
     cout << " = " << scartati/max_baseline.size()*100 << " %" << endl;
     scartati = max_baseline.size() - alfa_count2 - wf_count2;
-    cout << "DATI SCARTATI 2: " << scartati << " / " << max_baseline.size();
+    cout << "DATI SCARTATI with: " << scartati << " / " << max_baseline.size();
     cout << " = " << scartati/max_baseline.size()*100 << " %" << endl;
     cout << "--------------------------------------------------" << endl;
 
     TCanvas *c3 = new TCanvas("c3", "c3", 800, 600);
+    c3->SetLogy();
     E_hist_noBkg->Draw();
     gausFit3->Draw("same"); gausFit4->Draw("same");
     l11->Draw("same"); l22->Draw("same"); l33->Draw("same"); l44->Draw("same");
