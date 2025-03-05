@@ -11,6 +11,7 @@
 - [Targhetta Au: piccoli angoli](#targhetta-au-piccoli-angoli)
 - [Pulser: stima del dead time](#pulser-stima-del-dead-time)
 - [Stima X](#stima-x)
+- [Filtro bad-waveforms per gli X](#filtro-bad-waveforms-per-gli-x)
 - [Acquisizioni con nuova geometria](#acquisizioni-con-nuova-geometria)
 
 ## Accesso da remoto
@@ -93,6 +94,15 @@ Presa dati entro ±15 gradi, come in [Test no targhetta](#test-no-targhetta), li
 [articolo Collazuol](https://www.tandfonline.com/doi/full/10.1080/00223131.2016.1174167#d1e675)
 [attenuazione in foglio di carta](https://physics.nist.gov/cgi-bin/Xcom/xcom2?Method=Comp&Output2=Hand)
 [attenuazione in aria](https://physics.nist.gov/PhysRefData/XrayMassCoef/ComTab/air.html)
+
+## Filtro bad waveforms per gli X
+Ci sono due principali tipologie di segnali da scartare: uno più facile da individuare, ossia sono oscillazioni di rumore senza un picco di segnale (1% all'angolo 0) (*type1*), e uno più difficile, quasi soggettivo (*type2*).  
+1) filtro che elimina 100% *type1*: scartare i segnali che abbiano altezza relativa (max-min) inferiore a 2000 circa, il valore è valutato qualitativamente (pari circa al limite inferiore nell'histo dell'energia)
+2) filtro che elimina 50% *type2*: dopo aver normalizzato l'integrale a 1, scartare i segnali che abbiano le seguenti caratteristiche: $x_{max}<x_0$, $y_{max}<y_0$, $int_{max}<int_0$, in questo modo si scartano i segnali che hanno il massimo eccessivamente shiftato a sinistra, l'altezza normalizzata del picco troppo bassa e l'integrale attorno al picco troppo poca (ossia significa che il resto dell'area è sparsa, magari ha la coda dx del segnale eccessivamente alta). i valori $x_0$, $y_0$, $int_0$ sono stati trovati a partire dalla media dei valori di waveform corrette
+3) filtro che elimina 90% *type2*: scartare i segnali con $integral > a$, dove $integral$ è stato calcolato sui segnali rinormalizzati ponendo il massimo = 1 (si divide ogni bin/entry per il valore del massimo), e $a$ è calcolata come media dei valori dell'integrale di solo waveform corrette + 2$\times$deviazione standard
+4) idea *type1/type2*: fare una media mobile del segnale (ogni valore sostituito con la media dei suoi vicini), in questo modo si eliminano i rumori ma i picchi di segnale dovrebbero rimanere nitidi
+
+
 
 
 ## Acquisizioni con nuova geometria
